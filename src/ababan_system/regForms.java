@@ -90,6 +90,9 @@ public class regForms extends javax.swing.JFrame {
         regPass = new javax.swing.JPasswordField();
         fn5 = new javax.swing.JLabel();
         regnumber = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -225,9 +228,18 @@ public class regForms extends javax.swing.JFrame {
         });
         jPanel3.add(regnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 200, 30));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 470, 500));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 450, 500));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 570));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.jpg"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 270, 210));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/12.jpg"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 260, 110));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/12.jpg"))); // NOI18N
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 260, 200));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -342,9 +354,12 @@ public class regForms extends javax.swing.JFrame {
     private javax.swing.JLabel fn3;
     private javax.swing.JLabel fn4;
     private javax.swing.JLabel fn5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

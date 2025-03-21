@@ -168,7 +168,7 @@ public class createUserForm extends javax.swing.JFrame {
         });
         jPanel3.add(registrationButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 130, 30));
 
-        regUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "admin", "user ", " " }));
+        regUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADMIN", "USER" }));
         regUserType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regUserTypeActionPerformed(evt);
@@ -201,7 +201,7 @@ public class createUserForm extends javax.swing.JFrame {
         fn3.setText("Password:");
         jPanel3.add(fn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 70, 10));
 
-        regUserStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "active", "pending" }));
+        regUserStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ACTIVE", "PENDING" }));
         regUserStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regUserStatusActionPerformed(evt);
@@ -216,6 +216,7 @@ public class createUserForm extends javax.swing.JFrame {
 
         UId.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         UId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        UId.setEnabled(false);
         jPanel3.add(UId, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 210, 30));
 
         fn6.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
@@ -343,7 +344,7 @@ public class createUserForm extends javax.swing.JFrame {
     }//GEN-LAST:event_registrationButtonMouseClicked
 
     private void registrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrationButtonActionPerformed
-        
+    
         
         if(regName.getText().isEmpty()||regnumber.getText().isEmpty()||regUser.getText().isEmpty()||regPass.getText().isEmpty())
 
@@ -361,8 +362,8 @@ public class createUserForm extends javax.swing.JFrame {
         else{
 
             dbConnector dbc=new dbConnector();
-            if(dbc.insertData("INSERT INTO tbl_user(u_fname, u_email, u_contact, u_username, u_password, u_status, u_type) "
-                + "VALUES('"+regName.getText()+"','"+regEmail.getText()+"','"+regnumber.getText()+",'"+regUser.getText()+"','"+regPass.getText()+"','"+regUserStatus.getSelectedItem()+"','"+regUserType.getSelectedItem()+"')"))
+            if(dbc.insertData("INSERT INTO tbl_user(u_fname, u_email, u_contact, u_username, u_password, u_type, u_status) " 
+                + "VALUES('"+regName.getText()+"','"+regEmail.getText()+"','"+regnumber.getText()+"','"+regUser.getText()+"','"+regPass.getText()+"','"+regUserType.getSelectedItem()+"','"+regUserStatus.getSelectedItem()+"')")) 
         {
             JOptionPane.showMessageDialog(null, "Inserted Successfully");
             usersForm uf = new usersForm();
@@ -518,8 +519,8 @@ public class createUserForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cancelbutton;
-    private javax.swing.JButton Clearb;
-    private javax.swing.JButton DeleteB;
+    public javax.swing.JButton Clearb;
+    public javax.swing.JButton DeleteB;
     private javax.swing.JButton Refresh;
     public javax.swing.JTextField UId;
     public javax.swing.JButton UpdateB;
